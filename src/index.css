@@ -1,0 +1,145 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f1f3f6; /* slightly darker bg */
+  margin: 0;
+  padding: 0;
+}
+
+/* App Container */
+.app {
+  max-width: 520px;
+  margin: 60px auto;
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 10px;
+
+  /* more defined shadow */
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.12),
+    0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 22px;
+  color: #111827;
+}
+
+/* Note Form */
+.note-form {
+  margin-bottom: 22px;
+}
+
+.note-form input,
+.note-form textarea {
+  width: 100%;
+  padding: 11px;
+  margin-bottom: 14px;
+  border: 1.6px solid #9ca3af; /* darker border */
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #ffffff;
+}
+
+/* Placeholder */
+.note-form input::placeholder,
+.note-form textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Focus state — BLACK, not blue */
+.note-form input:focus,
+.note-form textarea:focus {
+  outline: none;
+  border-color: #000000;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
+}
+
+/* Textarea */
+.note-form textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* Add Button */
+.note-form button {
+  width: 100%;
+  padding: 11px;
+  background: #111827;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.note-form button:disabled {
+  background: #c7c7c7;
+  cursor: not-allowed;
+}
+
+/* Error Text */
+.error {
+  color: #d93025;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+/* Notes List */
+.note-list {
+  margin-top: 24px;
+}
+
+/* Note Item — FIXED BLENDING ISSUE */
+.note-item {
+  background: #ffffff; /* solid card surface */
+  border: 1px solid #d1d5db;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+
+  /* subtle card separation */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.note-item h3 {
+  margin: 0 0 6px 0;
+  color: #111827;
+}
+
+.note-item p {
+  margin: 0;
+  color: #374151;
+  font-size: 14px;
+}
+
+/* Delete Button */
+.note-item button {
+  margin-top: 12px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.note-item button:hover {
+  opacity: 0.9;
+}
+
+/* Loader & Empty State */
+.loader,
+.empty-state {
+  text-align: center;
+  margin-top: 40px;
+  color: #6b7280;
+}
